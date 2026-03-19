@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Chowdhary — Data Science Engineer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="grid-bg"></div>
+    <canvas id="numberBorderCanvas"></canvas>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">AC_</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="theme-switcher">
+                <button class="theme-btn theme-cyber" data-theme-btn="cyber" aria-label="Cybersecurity Theme"></button>
+                <button class="theme-btn theme-green" data-theme-btn="green" aria-label="Green Theme"></button>
+                <button class="theme-btn theme-original" data-theme-btn="original" aria-label="Original Theme"></button>
+                <button class="theme-btn theme-monochrome" data-theme-btn="monochrome"
+                    aria-label="Monochrome Theme"></button>
+            </div>
+            
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO / INTRODUCTION & SUMMARY -->
+    <section id="hero-section" style="padding-top: 0;">
+        <div id="hero">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+
+            <div class="hero-image"
+                style="mask-image: linear-gradient(to right, transparent 0%, black 80%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 80%);">
+                <div id="videoOverlay"
+                    style="position: absolute; inset: 0; z-index: 1; transition: background-color 2s ease; mix-blend-mode: color; pointer-events: none;">
+                </div>
+                <video id="heroVideo" src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4"
+                    autoplay loop muted playsinline
+                    style="height: 100%; width: 100%; object-fit: cover; position: relative; z-index: 0;"></video>
+            </div>
+
+            <div class="hero-content">
+                <div class="status-badge">
+                    <div class="status-dot"></div>
+                    Available for opportunities
+                </div>
+                <div class="hero-tag">Computer Science Engineer</div>
+                <h1 class="hero-name">
+                    <span class="line1">ANKIT</span>
+                    <span class="line2">CHOWDHARY</span>
+                </h1>
+                <p class="hero-desc">
+                    Data engineer & AI enthusiast turning raw data into intelligent systems. Skilled in Python, machine
+                    learning, AWS cloud architecture, and building end-to-end pipelines that scale.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">View Projects →</a>
+                    <a href="mailto:ankitchowdhary1609@gmail.com" class="btn-ghost">Get in Touch</a>
+                    <a href="Ankit CV.pdf" target="_blank" class="btn-primary" download>Download Resume ↓</a>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-num">5★</div>
+                    <div class="stat-label">HackerRank</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">1k+</div>
+                    <div class="stat-label">LinkdIn Connections</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" style="background: var(--bg2);">
+        <div class="section-header reveal">
+            <span class="section-num">01</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid reveal">
+            <div class="about-text" style="color: var(--text-dim); line-height: 1.8; font-size: 0.9rem;">
+                <p style="margin-bottom: 1.5rem;">Hello! I'm Ankit Chowdhary, a passionate Data and AI Engineer
+                    dedicated to
+                    building scaleable, intelligent systems. My journey in tech started with a deep curiosity about how
+                    data
+                    shapes the world around us. Currently pursuing my B.Tech in Computer Science & Engineering at Lovely
+                    Professional University.</p>
+                <p>I specialize in Python, AWS Cloud Architecture, and Machine Learning. Whether I'm cleaning messy
+                    datasets, designing complex automation pipelines, or evaluating AI models, I thrive on solving
+                    challenging problems and driving impactful results through technology.</p>
+            </div>
+            <div class="about-image-container">
+                <img src="pic1.jpeg" alt="Ankit Chowdhary" class="about-image">
+            </div>
+        </div>
+
+        <h3 class="reveal"
+            style="font-family: 'Syne', sans-serif; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1.5rem; color: var(--accent);">
+            Education</h3>
+        <div class="reveal">
+            <div class="edu-card">
+                <div>
+                    <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
+                    <div class="edu-school">Lovely Professional University</div>
+                    <div class="edu-cgpa">CGPA: 7.8 / 10.0</div>
+                </div>
+                <div class="edu-year">2023 — Present</div>
+            </div>
+            <div class="edu-card">
+                <div>
+                    <div class="edu-degree">Class 12th</div>
+                    <div class="edu-school">St Paul's Sr Sec School Palampur</div>
+                    <div class="edu-cgpa">Percentage: 78%</div>
+                </div>
+                <div class="edu-year">2022</div>
+            </div>
+            <div class="edu-card">
+                <div>
+                    <div class="edu-degree">Class 10th</div>
+                    <div class="edu-school">St Paul's Sr Sec School Palampur</div>
+                    <div class="edu-cgpa">Percentage: 73%</div>
+                </div>
+                <div class="edu-year">2020</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-grid reveal">
+            <div class="skill-card">
+                <span class="skill-icon">⌨️</span>
+                <div class="skill-category">Languages</div>
+                <div class="skill-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">C</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🔧</span>
+                <div class="skill-category">Tools & Frameworks</div>
+                <div class="skill-tags">
+                    <span class="tag">Pandas</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">Seaborn</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Jupyter</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Power BI</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🧠</span>
+                <div class="skill-category">Domain Skills</div>
+                <div class="skill-tags">
+                    <span class="tag">Data Cleaning</span>
+                    <span class="tag">EDA</span>
+                    <span class="tag">Statistical Analysis</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" style="background: var(--bg2);">
+        <div class="section-header reveal">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid reveal">
+            <div class="project-card">
+                <div class="project-num">01</div>
+                <div class="project-title">Airline Customer Satisfaction</div>
+                <p class="project-desc">Conducted exploratory data analysis on a 60K+ row airline dataset to uncover key
+                    drivers of passenger satisfaction. Built an interactive Streamlit dashboard for live insights.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Pandas</span>
+                    <span class="tech-pill">NumPy</span>
+                    <span class="tech-pill">Seaborn</span>
+                    <span class="tech-pill">Streamlit</span>
+                    <span class="tech-pill">EDA</span>
+                </div>
+                <a href="https://colab.research.google.com/drive/1cRuB1X22fiNwYiBlC99vIoSLqwBKRuQA?usp=sharing"
+                    target="_blank" class="project-link">View Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-num">02</div>
+                <div class="project-title">ScanVault</div>
+                <p class="project-desc">Serverless receipt processing pipeline using AWS S3, Lambda, Textract, DynamoDB,
+                    and SES — automating OCR, data extraction, and email notifications via event-driven workflows.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">AWS S3</span>
+                    <span class="tech-pill">Lambda</span>
+                    <span class="tech-pill">Textract</span>
+                    <span class="tech-pill">DynamoDB</span>
+                    <span class="tech-pill">SES</span>
+                    <span class="tech-pill">IAM</span>
+                </div>
+                <a href="https://github.com/AnkitChowdhary1609/ScanVault-Project.git" target="_blank"
+                    class="project-link">View Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-num">03</div>
+                <div class="project-title">Sneak In</div>
+                <p class="project-desc">Designed and developed a fully responsive sneaker showcase website using modern
+                    HTML, CSS, and JavaScript. Deployed via GitHub Pages for public portfolio access.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">HTML</span>
+                    <span class="tech-pill">CSS</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">GitHub Pages</span>
+                    <span class="tech-pill">Responsive Design</span>
+                </div>
+                <a href="https://ankitchowdhary1609.github.io/Sneak-In/" target="_blank" class="project-link">View
+                    Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="section-header reveal">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Experience</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Nov 2024 — Feb 2025</div>
+                <div class="timeline-role">AI Trainer</div>
+                <div class="timeline-company">Remote Contract</div>
+                <ul class="timeline-points">
+                    <li>Evaluated and refined AI-generated text and image recognition outputs for accuracy and
+                        relevance.</li>
+                    <li>Created and optimized training datasets and question–answer pairs across multiple domains.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot" style="background: var(--accent2); box-shadow: 0 0 20px var(--accent2);">
+                </div>
+                <div class="timeline-date">Aug 2023 — Present</div>
+                <div class="timeline-role">Student Explorer</div>
+                <div class="timeline-company">Project Based Learning · LPU</div>
+                <ul class="timeline-points">
+                    <li>Built projects in Python game development, websites, and Android apps using JSX and backend
+                        APIs.</li>
+                    <li>Created automation workflows with n8n, chatbots using Botpress, and worked on analytics
+                        projects.</li>
+                    <li>Strong in problem solving with 5 star on HackerRank in C, C++ and Python.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS: CP, HACKATHONS, OPEN SOURCE, BLOGS, PUBLICATIONS -->
+    <section id="achievements" style="background: var(--bg2);">
+        <div class="section-header reveal">
+            <span class="section-num">05</span>
+            <h2 class="section-title">Beyond the Canvas</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="achievements-grid reveal">
+            <div class="achievement-card">
+                <div class="achievement-bg-text">CP</div>
+                <div class="achievement-content">
+                    <div class="achievement-title" style="color: var(--accent);">🏆 Competitive Programming</div>
+                    <ul class="achievement-list">
+                        <li>Achieved 5-star rating on HackerRank for algorithmic problem solving in C, C++, and Python.
+                        </li>
+                        <li>Participated in college-level hackathons focusing on building scalable backend APIs.</li>
+                        <li>Consistently practicing data structures and algorithms on LeetCode and Codeforces.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-bg-text">OSS</div>
+                <div class="achievement-content">
+                    <div class="achievement-title" style="color: var(--accent2);">🌐 Open Source Contributions</div>
+                    <ul class="achievement-list">
+                        <li>Active explorer of public AI and Data Engineering repositories on GitHub.</li>
+                        <li>Contributed documentation updates to growing Python automation frameworks.</li>
+                        <li>Committed to building accessible, modular open-source solutions for community learning.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-bg-text">BLOG</div>
+                <div class="achievement-content">
+                    <div class="achievement-title" style="color: var(--accent3);">✍️ Blog & Technical Writing</div>
+                    <ul class="achievement-list">
+                        <li>Writing insightful articles breaking down complex Data Engineering pipelines.</li>
+                        <li>Sharing hands-on tutorials about bridging the gap between Machine Learning and AWS
+                            workflows.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-bg-text">R&D</div>
+                <div class="achievement-content">
+                    <div class="achievement-title" style="color: var(--accent);">🔬 Research & Patents</div>
+                    <ul class="achievement-list">
+                        <li>Currently exploring research methodologies surrounding AI-driven dataset optimization.</li>
+                        <li>Looking forward to publishing technical findings in upcoming academic journals related to
+                            cloud
+                            technologies.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <div class="section-header reveal">
+            <span class="section-num">06</span>
+            <h2 class="section-title">Certifications & Courses</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="certs-grid reveal">
+            <div class="cert-card">
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=631E77AF1F882B85E56F94587ED80E4DA61B52FB730F98CD564BA2B31AD29DF4"
+                    target="_blank" style="text-decoration:none;">
+                    <div class="cert-badge">✦</div>
+                    <div class="cert-issuer">Oracle</div>
+                    <div class="cert-name">OCI 2025 Certified AI Foundations Associate</div>
+                    <div class="cert-date">Nov 2025</div>
+                </a>
+            </div>
+            <div class="cert-card">
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=44A395CFC2647C75CA06A2587514EA4FB4985DEA572DA12E11EAB07C5554C94D"
+                    target="_blank" style="text-decoration:none;">
+                    <div class="cert-badge">✦</div>
+                    <div class="cert-issuer">Oracle</div>
+                    <div class="cert-name">OCI 2025 Certified Data Science Professional</div>
+                    <div class="cert-date">Oct 2025</div>
+                </a>
+            </div>
+            <div class="cert-card">
+                <a href="https://www.cipherschools.com/certificate/preview?id=687e1cf27efd6d5090703c80" target="_blank"
+                    style="text-decoration:none;">
+                    <div class="cert-badge">✦</div>
+                    <div class="cert-issuer">CipherSchool</div>
+                    <div class="cert-name">Cloud Computing — AWS</div>
+                    <div class="cert-date">Jul 2025</div>
+                </a>
+            </div>
+            <div class="cert-card">
+                <a href="https://www.credly.com/badges/11f683bf-a46d-48ac-92c0-ec2291cf1b97" target="_blank"
+                    style="text-decoration:none;">
+                    <div class="cert-badge">✦</div>
+                    <div class="cert-issuer">IBM</div>
+                    <div class="cert-name">Artificial Intelligence Fundamentals</div>
+                    <div class="cert-date">Jun 2025</div>
+                </a>
+            </div>
+            <div class="cert-card">
+                <a href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/gabev3vXhuACr48eb_SKZxezskWgmFjRvj9_hhxccs3utYa5yAKAZ_1750670935086_completion_certificate.pdf"
+                    target="_blank" style="text-decoration:none;">
+                    <div class="cert-badge">✦</div>
+                    <div class="cert-issuer">BCG X</div>
+                    <div class="cert-name">GenAI Job Simulation</div>
+                    <div class="cert-date">Jun 2025</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="background: var(--bg2);">
+        <div class="section-header reveal">
+            <span class="section-num">07</span>
+            <h2 class="section-title">Contact</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-wrapper reveal">
+            <div class="contact-left">
+                <div class="big-text">Let's <span>Build</span><br>Something.</div>
+                <p>Open to internships, projects, and collaborative opportunities in data engineering, machine learning,
+                    and cloud architecture.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="mailto:ankitchowdhary1609@gmail.com" class="btn-primary" style="display: inline-flex;">Send
+                        an
+                        Email →</a>
+                    <a href="Ankit CV.pdf" class="btn-ghost" style="display: inline-flex;" download>Download Resume
+                        ↓</a>
+                </div>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:ankitchowdhary1609@gmail.com" class="contact-link-item">
+                    <span class="link-icon">✉</span>
+                    ankitchowdhary1609@gmail.com
+                </a>
+                <a href="tel:+917876857173" class="contact-link-item">
+                    <span class="link-icon">📞</span>
+                    +91 78768 57173
+                </a>
+                <a href="https://github.com/AnkitChowdhary1609" target="_blank" class="contact-link-item">
+                    <span class="link-icon">⌥</span>
+                    github.com/AnkitChowdhary
+                </a>
+                <a href="https://www.linkedin.com/in/ankit-chowdhary-1609ac/" target="_blank" class="contact-link-item">
+                    <span class="link-icon">⬡</span>
+                    linkedin.com/ankit-chowdhary
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-left">ANKIT CHOWDHARY_</div>
+        <div class="footer-right">© 2025 · Built with passion ∞ data</div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
