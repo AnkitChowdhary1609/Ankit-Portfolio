@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cyber">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankit Chowdhary — Data Science Engineer</title>
+    <title>Ankit Chowdhary — Data Analyst Portfolio</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
@@ -14,17 +14,13 @@
 
 <body>
 
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-    <div class="grid-bg"></div>
-    <canvas id="numberBorderCanvas"></canvas>
-
     <!-- NAV -->
     <nav>
         <div class="nav-logo">AC_</div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#visualizations">Visualizations</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#achievements">Achievements</a>
@@ -32,14 +28,6 @@
         </div>
         
         <div class="nav-right">
-            <div class="theme-switcher">
-                <button class="theme-btn theme-cyber" data-theme-btn="cyber" aria-label="Cybersecurity Theme"></button>
-                <button class="theme-btn theme-green" data-theme-btn="green" aria-label="Green Theme"></button>
-                <button class="theme-btn theme-original" data-theme-btn="original" aria-label="Original Theme"></button>
-                <button class="theme-btn theme-monochrome" data-theme-btn="monochrome"
-                    aria-label="Monochrome Theme"></button>
-            </div>
-            
             <button class="hamburger" aria-label="Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -51,32 +39,19 @@
     <!-- HERO / INTRODUCTION & SUMMARY -->
     <section id="hero-section" style="padding-top: 0;">
         <div id="hero">
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-
-            <div class="hero-image"
-                style="mask-image: linear-gradient(to right, transparent 0%, black 80%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 80%);">
-                <div id="videoOverlay"
-                    style="position: absolute; inset: 0; z-index: 1; transition: background-color 2s ease; mix-blend-mode: color; pointer-events: none;">
-                </div>
-                <video id="heroVideo" src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4"
-                    autoplay loop muted playsinline
-                    style="height: 100%; width: 100%; object-fit: cover; position: relative; z-index: 0;"></video>
-            </div>
-
             <div class="hero-content">
                 <div class="status-badge">
                     <div class="status-dot"></div>
                     Available for opportunities
                 </div>
-                <div class="hero-tag">Computer Science Engineer</div>
+                <div class="hero-tag">Data Analyst & BI Specialist</div>
                 <h1 class="hero-name">
                     <span class="line1">ANKIT</span>
                     <span class="line2">CHOWDHARY</span>
                 </h1>
                 <p class="hero-desc">
-                    Data engineer & AI enthusiast turning raw data into intelligent systems. Skilled in Python, machine
-                    learning, AWS cloud architecture, and building end-to-end pipelines that scale.
+                    Data analyst & AI enthusiast turning raw data into actionable intelligence. Skilled in Python, SQL,
+                    Power BI, and building dashboards that help teams make smarter decisions.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn-primary">View Projects →</a>
@@ -85,18 +60,10 @@
                 </div>
             </div>
 
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-num">5★</div>
-                    <div class="stat-label">HackerRank</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">10+</div>
-                    <div class="stat-label">Certifications</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">500+</div>
-                    <div class="stat-label">LinkdIn Connections</div>
+            <div class="hero-visuals">
+                <div class="hero-preview-card">
+                    <div class="hero-preview-title">Analytics preview</div>
+                    <img src="chart-sales.svg" alt="Sales trend preview" class="hero-visual-image">
                 </div>
             </div>
         </div>
@@ -104,12 +71,12 @@
 
     <!-- ABOUT ME -->
     <section id="about" style="background: var(--bg2);">
-        <div class="section-header reveal">
+        <div class="section-header">
             <span class="section-num">01</span>
             <h2 class="section-title">About Me</h2>
             <div class="section-line"></div>
         </div>
-        <div class="about-grid reveal">
+        <div class="about-grid">
             <div class="about-text" style="color: var(--text-dim); line-height: 1.8; font-size: 0.9rem;">
                 <p style="margin-bottom: 1.5rem;">Hello! I'm Ankit Chowdhary, a passionate Data and AI Engineer
                     dedicated to
@@ -126,15 +93,15 @@
             </div>
         </div>
 
-        <h3 class="reveal"
+        <h3
             style="font-family: 'Syne', sans-serif; font-size: 1.5rem; margin-top: 3rem; margin-bottom: 1.5rem; color: var(--accent);">
             Education</h3>
-        <div class="reveal">
+        <div>
             <div class="edu-card">
                 <div>
                     <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
                     <div class="edu-school">Lovely Professional University</div>
-                    <div class="edu-cgpa">CGPA: 7.8 / 10.0</div>
+                    <div class="edu-cgpa">CGPA: 8.04 / 10.0</div>
                 </div>
                 <div class="edu-year">2023 — Present</div>
             </div>
@@ -159,121 +126,178 @@
 
     <!-- SKILLS -->
     <section id="skills">
-        <div class="section-header reveal">
+        <div class="section-header">
             <span class="section-num">02</span>
             <h2 class="section-title">Skills & Technologies</h2>
             <div class="section-line"></div>
         </div>
-        <div class="skills-grid reveal">
+        <div class="skills-grid">
             <div class="skill-card">
                 <span class="skill-icon">⌨️</span>
-                <div class="skill-category">Languages</div>
+                <div class="skill-category">Analytics Languages</div>
                 <div class="skill-tags">
                     <span class="tag">Python</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">C</span>
-                    <span class="tag">C++</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">R</span>
+                    <span class="tag">JavaScript</span>
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
+                    <span class="tag">Excel</span>
                     <span class="tag">MySQL</span>
                 </div>
             </div>
             <div class="skill-card">
                 <span class="skill-icon">🔧</span>
-                <div class="skill-category">Tools & Frameworks</div>
+                <div class="skill-category">Tools & BI</div>
                 <div class="skill-tags">
                     <span class="tag">Pandas</span>
                     <span class="tag">NumPy</span>
-                    <span class="tag">Matplotlib</span>
-                    <span class="tag">Seaborn</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">Jupyter</span>
-                    <span class="tag">Tableau</span>
                     <span class="tag">Power BI</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Jupyter</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Looker</span>
                 </div>
             </div>
             <div class="skill-card">
                 <span class="skill-icon">🧠</span>
-                <div class="skill-category">Domain Skills</div>
+                <div class="skill-category">Analysis Skills</div>
                 <div class="skill-tags">
                     <span class="tag">Data Cleaning</span>
                     <span class="tag">EDA</span>
                     <span class="tag">Statistical Analysis</span>
-                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Predictive Modeling</span>
                     <span class="tag">Data Visualization</span>
-                    <span class="tag">Automation</span>
+                    <span class="tag">Dashboarding</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATA VISUALIZATIONS -->
+    <section id="visualizations" style="background: var(--bg2);">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Data Visualizations</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <div class="chart-title">Sales Trend Analysis</div>
+                <p class="chart-desc">Tracked monthly revenue growth with predictive trend modeling for business decisions.</p>
+                <img src="chart-sales.svg" alt="Sales trend visualization" class="chart-image">
+                <div class="chart-meta">+28% YoY growth forecast with actionable KPI guidance.</div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Customer Segmentation</div>
+                <p class="chart-desc">Segmented users by behavior, improving campaign precision and retention strategies.</p>
+                <img src="chart-segmentation.svg" alt="Customer segmentation chart" class="chart-image">
+                <div class="chart-meta">Identified top customer clusters for revenue uplift.</div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Operational Dashboard</div>
+                <p class="chart-desc">Built performance dashboards to monitor supply chain, delivery, and model metrics.</p>
+                <img src="chart-operations.svg" alt="Operational dashboard" class="chart-image">
+                <div class="chart-meta">Enabled real-time insight with strong visualization storytelling.</div>
             </div>
         </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" style="background: var(--bg2);">
-        <div class="section-header reveal">
-            <span class="section-num">03</span>
+        <div class="section-header">
+            <span class="section-num">04</span>
             <h2 class="section-title">Projects</h2>
             <div class="section-line"></div>
         </div>
-        <div class="projects-grid reveal">
+        <div class="projects-grid">
             <div class="project-card">
                 <div class="project-num">01</div>
-                <div class="project-title">Airline Customer Satisfaction</div>
-                <p class="project-desc">Conducted exploratory data analysis on a 60K+ row airline dataset to uncover key
-                    drivers of passenger satisfaction. Built an interactive Streamlit dashboard for live insights.</p>
+                <div class="project-title">HealthMate AI</div>
+                <p class="project-desc">Designed a health analytics platform that uses AI to personalize care insights
+                    and surface patient risk patterns from medical data.</p>
                 <div class="project-tech">
                     <span class="tech-pill">Python</span>
                     <span class="tech-pill">Pandas</span>
-                    <span class="tech-pill">NumPy</span>
-                    <span class="tech-pill">Seaborn</span>
-                    <span class="tech-pill">Streamlit</span>
+                    <span class="tech-pill">Power BI</span>
+                    <span class="tech-pill">Machine Learning</span>
                     <span class="tech-pill">EDA</span>
                 </div>
-                <a href="https://colab.research.google.com/drive/1cRuB1X22fiNwYiBlC99vIoSLqwBKRuQA?usp=sharing"
-                    target="_blank" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-num">02</div>
-                <div class="project-title">ScanVault</div>
-                <p class="project-desc">Serverless receipt processing pipeline using AWS S3, Lambda, Textract, DynamoDB,
-                    and SES — automating OCR, data extraction, and email notifications via event-driven workflows.</p>
-                <div class="project-tech">
-                    <span class="tech-pill">AWS S3</span>
-                    <span class="tech-pill">Lambda</span>
-                    <span class="tech-pill">Textract</span>
-                    <span class="tech-pill">DynamoDB</span>
-                    <span class="tech-pill">SES</span>
-                    <span class="tech-pill">IAM</span>
-                </div>
-                <a href="https://github.com/AnkitChowdhary1609/ScanVault-Project.git" target="_blank"
+                <a href="https://github.com/AnkitChowdhary1609/Health-Mate-AI" target="_blank"
                     class="project-link">View Project →</a>
             </div>
             <div class="project-card">
-                <div class="project-num">03</div>
-                <div class="project-title">Sneak In</div>
-                <p class="project-desc">Designed and developed a fully responsive sneaker showcase website using modern
-                    HTML, CSS, and JavaScript. Deployed via GitHub Pages for public portfolio access.</p>
+                <div class="project-num">02</div>
+                <div class="project-title">EduMind AI</div>
+                <p class="project-desc">Built an AI-driven learning insights tool for student performance analysis,
+                    personalized course recommendations, and visualization-ready reports.</p>
                 <div class="project-tech">
-                    <span class="tech-pill">HTML</span>
-                    <span class="tech-pill">CSS</span>
-                    <span class="tech-pill">JavaScript</span>
-                    <span class="tech-pill">GitHub Pages</span>
-                    <span class="tech-pill">Responsive Design</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">SQL</span>
+                    <span class="tech-pill">Tableau</span>
+                    <span class="tech-pill">Data Visualization</span>
+                    <span class="tech-pill">Predictive Analytics</span>
                 </div>
-                <a href="https://ankitchowdhary1609.github.io/Sneak-In/" target="_blank" class="project-link">View
+                <a href="https://github.com/AnkitChowdhary1609/EduMind-AI" target="_blank" class="project-link">View
                     Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-num">03</div>
+                <div class="project-title">Uber Power BI</div>
+                <p class="project-desc">Developed a Power BI dashboard for ride-share operations, tracking utilization,
+                    revenue by region, and driver performance metrics.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Power BI</span>
+                    <span class="tech-pill">Data Modeling</span>
+                    <span class="tech-pill">DAX</span>
+                    <span class="tech-pill">KPIs</span>
+                    <span class="tech-pill">Dashboarding</span>
+                </div>
+                <a href="https://github.com/AnkitChowdhary1609/Uber-PowerBI" target="_blank" class="project-link">View
+                    Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-num">04</div>
+                <div class="project-title">Airline Customer Satisfaction</div>
+                <p class="project-desc">Performed EDA on airline data to identify passenger satisfaction drivers and
+                    build a decision-ready dashboard for stakeholder storytelling.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Pandas</span>
+                    <span class="tech-pill">Seaborn</span>
+                    <span class="tech-pill">EDA</span>
+                    <span class="tech-pill">Dashboard</span>
+                </div>
+                <a href="https://github.com/AnkitChowdhary1609/Airline-Customer-Satisfaction" target="_blank"
+                    class="project-link">View Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-num">05</div>
+                <div class="project-title">ScanVault</div>
+                <p class="project-desc">Automated receipt processing with OCR, data extraction and reporting workflows,
+                    supporting clean analytics-ready datasets.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">AWS</span>
+                    <span class="tech-pill">OCR</span>
+                    <span class="tech-pill">DynamoDB</span>
+                    <span class="tech-pill">Automation</span>
+                    <span class="tech-pill">Data Pipeline</span>
+                </div>
+                <a href="https://github.com/AnkitChowdhary1609/ScanVault-Project.git" target="_blank"
+                    class="project-link">View Project →</a>
             </div>
         </div>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
-        <div class="section-header reveal">
-            <span class="section-num">04</span>
+        <div class="section-header">
+            <span class="section-num">05</span>
             <h2 class="section-title">Experience</h2>
             <div class="section-line"></div>
         </div>
-        <div class="timeline reveal">
+        <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">Nov 2024 — Feb 2025</div>
@@ -304,13 +328,13 @@
 
     <!-- ACHIEVEMENTS: CP, HACKATHONS, OPEN SOURCE, BLOGS, PUBLICATIONS -->
     <section id="achievements" style="background: var(--bg2);">
-        <div class="section-header reveal">
-            <span class="section-num">05</span>
+        <div class="section-header">
+            <span class="section-num">06</span>
             <h2 class="section-title">Beyond the Canvas</h2>
             <div class="section-line"></div>
         </div>
 
-        <div class="achievements-grid reveal">
+        <div class="achievements-grid">
             <div class="achievement-card">
                 <div class="achievement-bg-text">CP</div>
                 <div class="achievement-content">
@@ -366,12 +390,12 @@
 
     <!-- CERTIFICATIONS -->
     <section id="certifications">
-        <div class="section-header reveal">
-            <span class="section-num">06</span>
+        <div class="section-header">
+            <span class="section-num">07</span>
             <h2 class="section-title">Certifications & Courses</h2>
             <div class="section-line"></div>
         </div>
-        <div class="certs-grid reveal">
+        <div class="certs-grid">
             <div class="cert-card">
                 <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=631E77AF1F882B85E56F94587ED80E4DA61B52FB730F98CD564BA2B31AD29DF4"
                     target="_blank" style="text-decoration:none;">
@@ -422,12 +446,12 @@
 
     <!-- CONTACT -->
     <section id="contact" style="background: var(--bg2);">
-        <div class="section-header reveal">
-            <span class="section-num">07</span>
+        <div class="section-header">
+            <span class="section-num">08</span>
             <h2 class="section-title">Contact</h2>
             <div class="section-line"></div>
         </div>
-        <div class="contact-wrapper reveal">
+        <div class="contact-wrapper">
             <div class="contact-left">
                 <div class="big-text">Let's <span>Build</span><br>Something.</div>
                 <p>Open to internships, projects, and collaborative opportunities in data engineering, machine learning,
